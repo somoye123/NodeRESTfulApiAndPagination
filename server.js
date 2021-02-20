@@ -1,14 +1,19 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const db = require('./models');
-// db.sequelize.sync();
-
-// In development, you may need to drop existing tables and re-sync database. Just use force: true as following code:
-
-db.sequelize.sync({ force: true }).then(() => {
-  console.log('Drop and re-sync db.');
-});
+const db = require('./app/models');
+db.mongoose
+  .connect(db.url, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log('Connected to the database!');
+  })
+  .catch((err) => {
+    console.log('Cannot connect to the database!', err);
+    process.exit();
+  });
 
 const corsOptions = {
   origin: 'http://localhost:8081',
