@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const db = require('./app/models');
+const db = require('./models');
 db.mongoose
   .connect(db.url, {
     useNewUrlParser: true,
