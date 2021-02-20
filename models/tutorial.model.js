@@ -1,15 +1,15 @@
-module.exports = (sequelize, Sequelize) => {
-  const Tutorial = sequelize.define('tutorial', {
-    title: {
-      type: Sequelize.STRING,
-    },
-    description: {
-      type: Sequelize.STRING,
-    },
-    published: {
-      type: Sequelize.BOOLEAN,
-    },
-  });
+module.exports = (mongoose) => {
+  const Tutorial = mongoose.model(
+    'tutorial',
+    mongoose.Schema(
+      {
+        title: String,
+        description: String,
+        published: Boolean,
+      },
+      { timestamps: true }
+    )
+  );
 
   return Tutorial;
 };
