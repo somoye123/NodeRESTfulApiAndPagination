@@ -1,7 +1,7 @@
 {
   "name": "NODE-EXPRESS-SEQUELIZE-POSTGRESQL",
   "version": "1.0.0",
-  "description": "Node.js Rest Apis with Express, Sequelize & PostgreSQL.",
+  "description": "Node.js Restful CRUD API with Node.js, Express and MongoDB",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,18 +9,15 @@
   "keywords": [
     "nodejs",
     "express",
-    "sequelize",
     "rest",
     "api",
-    "postgresql"
+    "mongodb"
   ],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "pg": "^8.5.1",
-    "pg-hstore": "^2.3.3",
-    "sequelize": "^6.5.0"
+    "mongoose": "^5.11.17"
   }
 }
